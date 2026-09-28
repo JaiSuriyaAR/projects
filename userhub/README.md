@@ -4,7 +4,7 @@ A neo-brutalist user management dashboard built with **React**, **React Router**
 
 ![UserHub screenshot](./screenshots/home.png)
 
-> Add a screenshot at `screenshots/home.png`, or delete the line above.
+
 
 ## Features
 
