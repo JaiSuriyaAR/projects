@@ -9,9 +9,20 @@ export default function ThemeToggle() {
     document.documentElement.dataset.theme = mode;
   }, [mode]);
 
+  const isDark = mode === 'dark';
+
   return (
-    <button className="btn" onClick={toggle} aria-label="Toggle theme">
-      {mode === 'light' ? '🌙 Dark' : '☀️ Light'}
+    <button
+      className="theme-switch"
+      onClick={toggle}
+      aria-label="Toggle theme"
+      aria-pressed={isDark}
+    >
+      <span className="theme-switch-track">
+        <span className="theme-switch-label">☀️</span>
+        <span className="theme-switch-label">🌙</span>
+        <span className={`theme-switch-thumb ${isDark ? 'is-dark' : ''}`} />
+      </span>
     </button>
   );
 }

@@ -17,8 +17,7 @@ export default function SearchBar() {
   // Push the debounced value into the Easy Peasy store
   useEffect(() => {
     if (debounced !== storeTerm) setSearchTerm(debounced);
-  }, [debounced]); // eslint-disable-line react-hooks/exhaustive-deps
-
+  }, [debounced]); 
   return (
     <div className="search-bar">
       <input
